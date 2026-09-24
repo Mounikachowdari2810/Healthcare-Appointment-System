@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doctor Portal</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🏥 MediCare
+    </div>
+
+    <h1>
+        Doctor Portal
+    </h1>
+
+    <div class="header-buttons">
+
+        <button onclick="goHome()">
+            ← Home
+        </button>
+
+        <button onclick="logoutDoctor()">
+            Logout
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= LOGIN ================= -->
+
+<section id="doctorLogin" class="login-section">
+
+    <div class="login-box">
+
+        <div class="doctor-icon">
+            👨‍⚕️
+        </div>
+
+        <h2>
+            Doctor Login
+        </h2>
+
+        <p>
+            Login to manage your appointments
+        </p>
+
+
+        <label>
+            Select Doctor
+        </label>
+
+        <select id="doctorSelect">
+
+            <option value="">
+                Select Doctor
+            </option>
+
+        </select>
+
+
+        <label>
+            Doctor ID
+        </label>
+
+        <input
+            type="text"
+            id="doctorId"
+            placeholder="Enter Doctor ID">
+
+
+        <label>
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="doctorPassword"
+            placeholder="Enter Password">
+
+
+        <button
+            class="login-btn"
+            onclick="doctorLogin()">
+
+            Login
+
+        </button>
+
+
+        <div class="login-info">
+
+            <h4>Demo Doctor Login</h4>
+
+            <p>
+                Select any doctor from the list.
+            </p>
+
+            <p>
+                Use the Doctor ID and Password
+                assigned to that doctor.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section id="doctorDashboard" class="dashboard">
+
+    <div class="dashboard-title">
+
+        <div>
+
+            <p class="small-title">
+                DOCTOR DASHBOARD
+            </p>
+
+            <h2>
+                Welcome, <span id="loggedDoctorName">
+                    Doctor
+                </span> 👋
+            </h2>
+
+            <p>
+                Manage your patient appointments
+                and availability.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= STATS ================= -->
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📅
+            </div>
+
+            <h3 id="totalAppointments">
+                0
+            </h3>
+
+            <p>
+                Total Appointments
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ✅
+            </div>
+
+            <h3 id="confirmedAppointments">
+                0
+            </h3>
+
+            <p>
+                Confirmed
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                ⏳
+            </div>
+
+            <h3 id="pendingAppointments">
+                0
+            </h3>
+
+            <p>
+                Pending
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                👥
+            </div>
+
+            <h3 id="patientCount">
+                0
+            </h3>
+
+            <p>
+                Patients
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= APPOINTMENTS ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>
+            Appointment Management
+        </h2>
+
+        <p class="card-description">
+            View and manage appointments for
+            <strong id="appointmentDoctorName">
+                Doctor
+            </strong>.
+        </p>
+
+
+        <div id="adminAppointmentList">
+
+            <p class="empty">
+                No appointments available.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= AVAILABILITY ================= -->
+
+    <div class="dashboard-card">
+
+        <h2>
+            Doctor Availability
+        </h2>
+
+        <p class="card-description">
+            Update your available consultation time.
+        </p>
+
+
+        <div class="availability-form">
+
+            <div>
+
+                <label>
+                    Available From
+                </label>
+
+                <input
+                    type="time"
+                    id="availableFrom">
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Available Until
+                </label>
+
+                <input
+                    type="time"
+                    id="availableUntil">
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="save-btn"
+            onclick="saveAvailability()">
+
+            Save Availability
+
+        </button>
+
+
+        <p id="availabilityMessage"></p>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Healthcare Appointment System
+    </p>
+
+</footer>
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>

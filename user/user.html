@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Portal</title>
+
+    <link rel="stylesheet" href="user.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        🏥 MediCare
+    </div>
+
+    <h1>
+        Patient Portal
+    </h1>
+
+    <button class="logout-btn"
+            onclick="logout()">
+        Logout
+    </button>
+
+</header>
+
+
+<section class="welcome">
+
+    <h2>
+        Welcome,
+        <span id="patientNameDisplay">
+            Patient
+        </span>
+        👋
+    </h2>
+
+    <p>
+        Book and manage your healthcare appointments easily.
+    </p>
+
+</section>
+
+
+<!-- ================= DOCTORS ================= -->
+
+<section id="doctors"
+         class="doctors-section">
+
+    <h2>
+        Our Doctors
+    </h2>
+
+    <p class="section-description">
+        Choose a doctor according to your healthcare needs.
+    </p>
+
+    <div id="doctorContainer"
+         class="doctor-container">
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section id="booking"
+         class="booking-section">
+
+    <h2>
+        Book an Appointment
+    </h2>
+
+    <form onsubmit="bookAppointment(event)">
+
+        <label>
+            Patient Name
+        </label>
+
+        <input
+            type="text"
+            id="appointmentPatient"
+            placeholder="Patient Name"
+            readonly>
+
+
+        <label>
+            Select Doctor
+        </label>
+
+        <select id="doctorSelect">
+
+            <option value="">
+                Select a Doctor
+            </option>
+
+        </select>
+
+
+        <label>
+            Appointment Date
+        </label>
+
+        <input
+            type="date"
+            id="appointmentDate">
+
+
+        <label>
+            Appointment Time
+        </label>
+
+        <input
+            type="time"
+            id="appointmentTime">
+
+
+        <label>
+            Reason for Appointment
+        </label>
+
+        <textarea
+            id="appointmentReason"
+            placeholder="Enter reason for appointment"
+            rows="4"></textarea>
+
+
+        <button
+            type="submit"
+            class="book-btn">
+
+            Book Appointment
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= REMINDERS ================= -->
+
+<section id="reminders"
+         class="appointment-section">
+
+    <h2>
+        🔔 Appointment Reminders
+    </h2>
+
+    <div id="appointmentList">
+
+        <p class="empty">
+            No appointments booked yet.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONSULTATION ================= -->
+
+<section id="consultation"
+         class="consultation-section">
+
+    <h2>
+        🎥 Virtual Consultation
+    </h2>
+
+    <p>
+        Attend your appointment online with the doctor.
+    </p>
+
+    <button
+        class="consult-btn"
+        onclick="startConsultation()">
+
+        Start Consultation
+
+    </button>
+
+</section>
+
+
+<!-- ================= CONSULTATION MODAL ================= -->
+
+<div id="consultationModal"
+     class="consultation-modal">
+
+    <div class="consultation-box">
+
+        <button
+            class="close-consultation"
+            onclick="closeConsultation()">
+
+            ×
+
+        </button>
+
+        <div class="video-area">
+
+            <div class="video-icon">
+                🎥
+            </div>
+
+            <h2>
+                Virtual Consultation
+            </h2>
+
+            <p>
+                Doctor will join the consultation shortly.
+            </p>
+
+        </div>
+
+
+        <div class="consultation-controls">
+
+            <button onclick="toggleMic()">
+                🎤 Microphone
+            </button>
+
+            <button onclick="toggleCamera()">
+                📷 Camera
+            </button>
+
+            <button
+                class="end-btn"
+                onclick="closeConsultation()">
+
+                End Consultation
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 Healthcare Appointment System
+    </p>
+
+</footer>
+
+
+<script src="user.js"></script>
+
+</body>
+</html>

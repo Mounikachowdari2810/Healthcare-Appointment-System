@@ -1,0 +1,52 @@
+{
+    "doctors": [
+        {
+            "id": 1,
+            "name": "Dr. Anjali Rao",
+            "specialization": "Cardiologist",
+            "experience": "10 Years",
+            "available": "9:00 AM - 1:00 PM",
+            "image": "❤️"
+        },
+        {
+            "id": 2,
+            "name": "Dr. Rahul Sharma",
+            "specialization": "Dermatologist",
+            "experience": "8 Years",
+            "available": "10:00 AM - 2:00 PM",
+            "image": "🩺"
+        },
+        {
+            "id": 3,
+            "name": "Dr. Priya Menon",
+            "specialization": "Pediatrician",
+            "experience": "7 Years",
+            "available": "9:00 AM - 12:00 PM",
+            "image": "👩‍⚕️"
+        },
+        {
+            "id": 4,
+            "name": "Dr. Arjun Reddy",
+            "specialization": "General Physician",
+            "experience": "12 Years",
+            "available": "10:00 AM - 5:00 PM",
+            "image": "👨‍⚕️"
+        },
+        {
+            "id": 5,
+            "name": "Dr. Sneha Kapoor",
+            "specialization": "Neurologist",
+            "experience": "9 Years",
+            "available": "11:00 AM - 3:00 PM",
+            "image": "🧠"
+        },
+        {
+            "id": 6,
+            "name": "Dr. Vikram Singh",
+            "specialization": "Orthopedic",
+            "experience": "11 Years",
+            "available": "9:30 AM - 4:00 PM",
+            "image": "🦴"
+        }
+    ]
+}

@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #222;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+header h1 {
+    color: #123b5d;
+    font-size: 26px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons button {
+    border: none;
+    background: #1769aa;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.header-buttons button:hover {
+    background: #0d4f80;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-section {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-box {
+    width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.doctor-icon {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #123b5d;
+    margin-bottom: 8px;
+}
+
+.login-box > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.login-box input,
+.login-box select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6df;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+    outline: none;
+    border-color: #1769aa;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #1769aa;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #0d4f80;
+}
+
+.login-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef6fc;
+    border-radius: 8px;
+    text-align: center;
+    color: #555;
+}
+
+.login-info h4 {
+    color: #1769aa;
+    margin-bottom: 7px;
+}
+
+
+/* ================= DASHBOARD ================= */
+
+.dashboard {
+    display: none;
+    padding: 40px 6%;
+}
+
+.dashboard-title {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.small-title {
+    color: #1769aa;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.dashboard-title h2 {
+    color: #123b5d;
+    margin-bottom: 8px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.stat-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    color: #1769aa;
+}
+
+.stat-card p {
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* ================= DASHBOARD CARDS ================= */
+
+.dashboard-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.dashboard-card h2 {
+    color: #123b5d;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* ================= APPOINTMENTS ================= */
+
+.appointment-card {
+    border: 1px solid #dce5ec;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.appointment-card h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+.appointment-card p {
+    margin: 6px 0;
+    color: #555;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.pending {
+    color: #d58b00;
+}
+
+.status.confirmed {
+    color: green;
+}
+
+.status.cancelled {
+    color: red;
+}
+
+.appointment-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.confirm-btn,
+.cancel-btn {
+    border: none;
+    padding: 9px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.confirm-btn {
+    background: #28a745;
+}
+
+.cancel-btn {
+    background: #dc3545;
+}
+
+.empty {
+    color: #777;
+    padding: 15px 0;
+}
+
+
+/* ================= AVAILABILITY ================= */
+
+.availability-form {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.availability-form div {
+    flex: 1;
+}
+
+.availability-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.availability-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd6df;
+    border-radius: 7px;
+}
+
+.save-btn {
+    padding: 12px 20px;
+    border: none;
+    background: #1769aa;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #0d4f80;
+}
+
+#availabilityMessage {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #123b5d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .availability-form {
+        flex-direction: column;
+    }
+
+    .login-box {
+        width: 100%;
+    }
+}
