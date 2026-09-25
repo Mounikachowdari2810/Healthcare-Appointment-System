@@ -2,7 +2,7 @@
     "doctors": [
         {
             "id": 1,
-            "name": "Dr. Anjali Rao",
+            "name": "Dr. Mounika",
             "specialization": "Cardiologist",
             "experience": "10 Years",
             "available": "9:00 AM - 1:00 PM",

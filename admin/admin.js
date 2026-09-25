@@ -4,7 +4,7 @@
 
 const doctorAccounts = {
 
-    "Dr. Anjali Rao": {
+    "Dr. Mounika": {
         id: "DOC001",
         password: "12345"
     },
